@@ -13,7 +13,7 @@ CREATE TABLE co2 (
 	co2 FLOAT, 
 	coal_co2 FLOAT,
 	gas_co2 FLOAT, 
-	oil_co FLOAT,
+	oil_co2 FLOAT,
     share_global_co2 FLOAT,
     FOREIGN KEY (ci_id) REFERENCES country_info(id)
 );
@@ -72,7 +72,18 @@ GROUP BY country
 HAVING SUM(co.co2) NOTNULL
 ORDER BY cumlative_co2 DESC
 limit 10;
-
+-- Creating a filtered view of the combined data, including only countries and no null co2 data
+CREATE VIEW country_data AS
+SELECT * FROM country_info AS ci
+JOIN co2 AS co
+ON ci.id = co.ci_id
+WHERE co2 IS NOT NULL
+    OR cement_co2 IS NOT NULL
+    OR coal_co2 IS NOT NULL
+	OR gas_co2 IS NOT NULL
+	OR oil_co2 IS NOT NULL 
+	
+DROP VIEW country_data
 --percent total with nested queries??
 WITH total_co2 AS (
     SELECT SUM(CAST(co.co2 AS numeric)) AS total_co2
@@ -94,15 +105,40 @@ SELECT ci.country, co.co2, co.coal_co2, co.gas_co2, co.oil_co, co.cement_co2
 FROM country_info AS ci
     JOIN co2 AS co
     ON ci.id = co.ci_id
-WHERE country NOT IN('World', 'North America', 'Asia', 'Africa', 'Europe', 'South America') 
+WHERE country NOT IN('World', 'Africa', 'South America') 
     AND country NOT LIKE '%countries%'
     AND country NOT LIKE '%GCP%'
 	AND country NOT LIKE '%International%'
 	AND country NOT LIKE '%Asia%'
 	AND country NOT LIKE '%Europe%'
 	AND country NOT LIKE 'North America%'
-    AND year = 2022
+    AND year = 1999
 	AND co.co2 IS NOT NULL
+	AND co.coal_co2 IS NOT NULL
+	AND co.gas_co2 IS NOT NULL
+	AND co.oil_co IS NOT NULL
+	AND co.cement_co2 IS NOT NULL
 ORDER BY co.oil_co DESC
+LIMIT 10;
+
+--Select and display c
+SELECT *
+FROM country_info AS ci
+JOIN co2 AS co
+ON ci.id = co.ci_id
+WHERE year = 2021
+    AND population IS NOT NULL
+	AND country NOT LIKE '%countries%'
+    AND country NOT LIKE '%GCP%'
+	AND country NOT LIKE '%International%'
+	AND country NOT LIKE '%Asia%'
+	AND country NOT LIKE '%Europe%'
+	AND country NOT LIKE 'North America%'
+	AND country NOT IN('World', 'Africa', 'South America')
+	AND co.co2 IS NOT NULL
+	AND co.coal_co2 IS NOT NULL
+	AND co.gas_co2 IS NOT NULL
+	AND co.oil_co IS NOT NULL
+	AND co.cement_co2 IS NOT NULL
 
 
