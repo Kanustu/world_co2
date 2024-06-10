@@ -1,3 +1,6 @@
+--World Co2 exploration
+--Skills used: Joins, CTE's, Case Statements, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
 CREATE Table country_info (
 	id SERIAL PRIMARY KEY,
 	country VARCHAR(50),
@@ -17,11 +20,34 @@ CREATE TABLE co2 (
     share_global_co2 FLOAT,
     FOREIGN KEY (ci_id) REFERENCES country_info(id)
 );
+COMMENT ON COLUMN
 
-SELECT * FROM co2;
-
-SELECT * FROM country_info;
-
+--Looking at total co2 vs coal_co2
+--Shows the percentage of co2 produced by coal within any given year and country
+SELECT ci.country, ci.year, co.co2, co.coal_co2, (co.coal_co2/co.co2)*100 AS coal_percentage
+FROM country_info ci
+JOIN co2 co
+ON ci.id = co.ci_id
+WHERE co2 IS NOT NULL
+    AND coal_co2 IS NOT NULL
+	AND co.co2 != 0
+	--add case statement to deal with zeroes
+	
+--Looking at co2 per capita levels
+SELECT ci.country, 
+    ci.year, 
+	ci.population, 
+	co.co2, 
+	ROUND(CAST(co.co2*1000000/ci.population AS numeric), 2) AS per_capita
+FROM country_info ci
+    JOIN co2 co
+    ON ci.id = co.ci_id
+WHERE co2 IS NOT NULL
+    AND population IS NOT NULL
+	AND year = 2020
+ORDER BY per_capita DESC
+	
+	
 -- Join country_info/co2 tables
 SELECT * FROM country_info AS ci
 JOIN co2 AS co
@@ -49,7 +75,7 @@ SELECT ci.year,
     --ROUND(CAST(SUM(co.coal_co2) AS numeric), 2) AS total_coal,
     ROUND(CAST(SUM(co.coal_co2)/SUM(co.co2) AS numeric) * 100, 2) AS coal_percentage,
 	ROUND(CAST(SUM(co.gas_co2)/SUM(co.co2) AS numeric) * 100, 2) AS gas_percentage,
-	ROUND(CAST(SUM(co.oil_co)/SUM(co.co2) AS numeric) * 100, 2) AS oil_percentage,
+	ROUND(CAST(SUM(co.oil_co2)/SUM(co.co2) AS numeric) * 100, 2) AS oil_percentage,
 	ROUND(CAST(SUM(co.cement_co2)/SUM(co.co2) AS numeric) * 100, 2) AS cement_percentage
 FROM country_info as ci
 JOIN co2 as co
