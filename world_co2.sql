@@ -2,6 +2,7 @@
 
 Skills used: Joins, CTE's, Case Statements, Window Functions, Aggregate Functions, Creating Views, Converting Data Types*/
 
+
 CREATE Table country_info (
 	id SERIAL PRIMARY KEY,
 	country VARCHAR(50),
@@ -22,6 +23,7 @@ CREATE TABLE co2 (
     FOREIGN KEY (ci_id) REFERENCES country_info(id)
 );
 
+
 --Select and display all the data that will be used
 SELECT 
     ci.country, 
@@ -38,7 +40,7 @@ FROM country_info ci
     ON ci.id = co.ci_id;
 	
 
--- Creating a filtered view of the combined data, including only current countries and no null co2 data
+-- Creating a View of the combined data, including only current countries and no null co2 data
 CREATE VIEW current_countries AS
 SELECT 
     ci.country, 
@@ -162,7 +164,7 @@ ORDER BY percentage DESC
 LIMIT 10;
 
 
---Calculate and display year over year percentage change
+--Calculate and display year over year percentage change of gdp, population and co2 within a country
 WITH lag_data AS (
 SELECT 
     year, 
