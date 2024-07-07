@@ -24,3 +24,9 @@ Exploration of countries and territories and their contribution to co2 levels
 - looked at gdp, co2, and population changes and wether or not there is a correlation between gdp/co2, or population/co2.
 
 - when looking at total co2 of all countries combined, compared with gdp and population. GDP has a much stronger corelattion than         population. But when you look at the correlation on a country by country basis, it vastly changes on what country you may be looking   at. Data for Canada shows that the correlation for gdp/co2 and population/co2 are very similar, and then China there is a slight       deviation between the two correlations. But Russia for example has a massive deviation between the two, with gdp correlation of 0.26   and a population correlation of 0.92. Which could point to a data inconsistency, whether in collection or some other reporting error,   or also within my own calculations.
+
+| Country   |   CO2 Emissions |   Population |
+|:----------|-----------------:|-------------:|
+| USA       |             5000 |          331 |
+| Canada    |             3000 |           38 |
+| Germany   |             4000 |           83 |
