@@ -48,7 +48,8 @@ Exploration of countries and territories and their contribution to co2 levels
 
 
 - and then when we look at specific countries especially the big co2 players in the United States and China, the United States coal       percentage is continously on the way down while China's coal use seems to be increasing again since 2020
-![CO2 Emissions Over Time](united_states_co2_emissions_plot.png)
+
+![United States Coal Emissions Over Time](united_states_co2_emissions_plot.png)
 
 - form here then created a per capita column to see the countries that are the biggest offenders as far as per capita co2 creation is     concerned.
 
