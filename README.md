@@ -8,7 +8,8 @@ Exploration of countries and territories and their contribution to co2 levels
 - started by looking at only countries that currently exist and filtered out any groupings of countries or territories
 
 - examined the cumulative co2 levels by country and the clear winner in this is the United States, followed from a distance by China
-| country        |      co2 |\n|:---------------|---------:|\n| United States  | 426915   |\n| China          | 260619   |\n| Russia         | 119291   |\n| Germany        |  93985.9 |\n| United Kingdom |  78834.7 |\n| Japan          |  67734.9 |\n| India          |  59740.7 |\n| France         |  39397.7 |\n| Canada         |  34613.2 |\n| Ukraine        |  30961.5 |
+
+'| country        |      co2 |\n|:---------------|---------:|\n| United States  | 426915   |\n| China          | 260619   |\n| Russia         | 119291   |\n| Germany        |  93985.9 |\n| United Kingdom |  78834.7 |\n| Japan          |  67734.9 |\n| India          |  59740.7 |\n| France         |  39397.7 |\n| Canada         |  34613.2 |\n| Ukraine        |  30961.5 |'
 
 - examined the cumulative co2 by years and filtered by the top ten and bottom ten years. within the top ten years they range from 2012
 
