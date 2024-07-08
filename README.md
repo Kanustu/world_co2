@@ -1,9 +1,11 @@
-# world_co2
-Exploration of countries and territories and their contribution to co2 levels
+# Global CO2 Fossil Fuel Emissions
+**Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 ## SQL/Postgresql
 
 
 ## Python/Jupyter Notebook
+
+### What countries have produced the most CO2 overtime?
 
 - started by looking at only countries that currently exist and filtered out any groupings of countries or territories
 
@@ -23,6 +25,8 @@ Exploration of countries and territories and their contribution to co2 levels
 | Ukraine        |          30961.508  |
 
 
+### What years was the most CO2 produced?
+
 - analyzed the cumulative CO2 emissions by year and identified the top ten years with the highest emissions. These years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
 
 | Year |        CO2 |   Coal CO2 |    Oil CO2 |    Gas CO2 | Cement CO2 |
@@ -39,17 +43,20 @@ Exploration of countries and territories and their contribution to co2 levels
 | 2012 | 225160.414 |  65333.733 |  50952.808 |  32064.065 |   6068.376 |
 
 
+### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
+
 - analyzed the yearly CO2 emissions, breaking them down by the percentage contributions from different industries: oil, gas, coal, and cement. Starting from the year 1750, coal was responsible for 100% of CO2 emissions. Over the centuries, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
-| Year |      CO2    | Coal CO2% | Oil CO2% | Gas CO2% | Cement CO2% |
-|------|-------------|-----------|----------|----------|-------------|
-| 1750 |   55.836    | 100.00    |  0.00    |  0.00    |   0.00      |
-| 2022 | 237679.814  |  27.61    | 22.04    | 15.65    |   2.96      |
 
-![Total Coal Emissions Over Time](total_coal_co2.png)
-- Next, we examined the percentage of CO2 emissions attributable to coal. Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
 
+![Industry Emissions Over Time](total_industry_co2.png)
+
+
+### Has coal production changed over time?
+- examined the percentage of CO2 emissions attributable to coal. Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
+#### United States
 ![United States Coal Emissions Over Time](united_states_co2_emissions_plot.png)
 
+#### China
 ![China Coal Percentage of CO2 Emissions](china_co2_emissions_plot.png)
 
 - form here then created a per capita column to see the countries that are the biggest offenders as far as per capita co2 creation is     concerned.
