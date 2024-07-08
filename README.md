@@ -7,7 +7,7 @@ Exploration of countries and territories and their contribution to co2 levels
 
 - started by looking at only countries that currently exist and filtered out any groupings of countries or territories
 
-- examined the cumulative co2 levels by country and the clear winner in this is the United States, followed from a distance by China
+- analyzed the cumulative CO2 emissions by country. The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
 
 | Country        |      CO2 Emissions |
 |:---------------|--------------------:|
@@ -23,7 +23,7 @@ Exploration of countries and territories and their contribution to co2 levels
 | Ukraine        |          30961.508  |
 
 
-- examined the cumulative co2 by years and filtered by the top ten years they range from 2012- 2022 with 2020 noticably missing.
+- analyzed the cumulative CO2 emissions by year and identified the top ten years with the highest emissions. These years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
 
 | Year |        CO2 |   Coal CO2 |    Oil CO2 |    Gas CO2 | Cement CO2 |
 |:-----|-----------:|-----------:|-----------:|-----------:|-----------:|
@@ -39,17 +39,17 @@ Exploration of countries and territories and their contribution to co2 levels
 | 2012 | 225160.414 |  65333.733 |  50952.808 |  32064.065 |   6068.376 |
 
 
-- yearly emmisions broken down by percentages of industry responsible for co2 levels(oil, gas, coal, and cement) Starting with the       earliest year we have data for being 1750 and 100% of co2 by coal, to the year of 2022 where the use of coal has gone down by 73%.
-
+- analyzed the yearly CO2 emissions, breaking them down by the percentage contributions from different industries: oil, gas, coal, and cement. Starting from the year 1750, coal was responsible for 100% of CO2 emissions. Over the centuries, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
 | Year |      CO2    | Coal CO2% | Oil CO2% | Gas CO2% | Cement CO2% |
 |------|-------------|-----------|----------|----------|-------------|
-| 1800 |   196.281   | 100.00    |  0.00    |  0.00    |   0.00      |
+| 1750 |   55.836    | 100.00    |  0.00    |  0.00    |   0.00      |
 | 2022 | 237679.814  |  27.61    | 22.04    | 15.65    |   2.96      |
 
-
-- and then when we look at specific countries especially the big co2 players in the United States and China, the United States coal       percentage is continously on the way down while China's coal use seems to be increasing again since 2020
+![Total Coal Emissions Over Time](total_coal_co2.png)
+- Next, we examined the percentage of CO2 emissions attributable to coal. Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
 
 ![United States Coal Emissions Over Time](united_states_co2_emissions_plot.png)
+
 ![China Coal Percentage of CO2 Emissions](china_co2_emissions_plot.png)
 
 - form here then created a per capita column to see the countries that are the biggest offenders as far as per capita co2 creation is     concerned.
