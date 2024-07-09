@@ -7,7 +7,7 @@
 
 ### What countries have produced the most CO2 overtime?
 
-- Analyzed the cumulative CO2 emissions by country. The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
+- The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
 
 | Country        |      CO2 Emissions |
 |:---------------|--------------------:|
@@ -25,7 +25,7 @@
 
 ### What years was the most CO2 produced?
 
-- Analyzed the cumulative CO2 emissions by year and identified the top ten years with the highest emissions. These years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
+- The top 10 years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
 
 | Year |        CO2 |   Coal CO2 |    Oil CO2 |    Gas CO2 | Cement CO2 |
 |:-----|-----------:|-----------:|-----------:|-----------:|-----------:|
@@ -43,7 +43,7 @@
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
 
-- Analyzed the yearly CO2 emissions, breaking them down by the percentage contributions from different industries: oil, gas, coal, and cement. Starting from the year 1750, coal was responsible for 100% of CO2 emissions. Over the centuries, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
+- Starting from the year 1750, coal was responsible for 100% of CO2 emissions. Over the centuries, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
 
 
 ![Industry Emissions Over Time](total_industry_co2.png)
@@ -51,7 +51,7 @@
 
 ### Has coal production changed over time?
 
-- Examined the percentage of CO2 emissions attributable to coal. Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
+- Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
 
 ![United States Coal Emissions Over Time](united_states_co2_emissions_plot.png)
 
@@ -73,7 +73,7 @@
 
 - When examining the total CO2 emissions of all countries combined in relation to GDP and population, GDP shows a much stronger correlation than population. 
 
-![Total correlation between gdp-co2 and pop-co2](toal_gdp_pop_comparison.png)
+![Total correlation between gdp-co2 and pop-co2](total_gdp_pop_comparison.png)
 
 - However, when analyzing the correlation on a country-by-country basis, the results vary significantly. For instance, in Canada, the correlation between GDP and CO2 emissions is quite similar to that between population and CO2 emissions. In contrast, China shows a slight deviation between the two correlations. Notably, Russia exhibits a substantial disparity, with a GDP-CO2 correlation of 0.26 and a population-CO2 correlation of 0.92. This large difference could indicate a data inconsistency, either due to issues in data collection, reporting errors, or potential errors in my own calculations.
 
