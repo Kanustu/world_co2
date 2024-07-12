@@ -61,6 +61,7 @@
 ### What are the per capita fossil fuel emisssions by country?
 
 - Despite being one of the largest CO2 producers due to its massive population, China's per capita CO2 emissions stand at 7.99 tons, placing it only in the middle of the pack. Qatar leads with a staggering 37.60 tons per capita, while countries like Australia, Canada, and the United States all have per capita emissions that are at least double that of China.
+
 | Year | Country       | CO2 per Capita (t) |
 |------|---------------|--------------------|
 | 2022 | Qatar         | 37.60              |
@@ -68,6 +69,7 @@
 | 2022 | United States | 14.95              |
 | 2022 | Canada        | 14.25              |
 | 2022 | China         | 7.99               |
+
 
 ### Is there a correlation between CO2 emissions from fossil fuels and a country's GDP or population?
 
