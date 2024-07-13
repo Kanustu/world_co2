@@ -49,7 +49,7 @@
 ![Industry Emissions Over Time](total_industry_co2.png)
 
 
-### Has coal production changed over time?
+### How has coal production changed over time?
 
 - Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
 
@@ -75,9 +75,11 @@
 
 - When examining the total CO2 emissions of all countries combined in relation to GDP and population, GDP shows a much stronger correlation than population. 
 
-![Total correlation between gdp-co2 and pop-co2](total_gdp_pop_comparison.png)
+![Total correlation between gdp-co2 and pop-co2](Total_gdp_pop_comparison.png)
 
 - However, when analyzing the correlation on a country-by-country basis, the results vary significantly. For instance, in Canada, the correlation between GDP and CO2 emissions is quite similar to that between population and CO2 emissions. In contrast, China shows a slight deviation between the two correlations. Notably, Russia exhibits a substantial disparity, with a GDP-CO2 correlation of 0.26 and a population-CO2 correlation of 0.92. This large difference could indicate a data inconsistency, either due to issues in data collection, reporting errors, or potential errors in my own calculations.
+
+![United States correlation between gdp/co2 and pop/co2](United States_gdp_pop_comparison.png)
 
 
 
