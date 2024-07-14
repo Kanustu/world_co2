@@ -77,9 +77,15 @@
 
 ![Total correlation between gdp-co2 and pop-co2](Total_gdp_pop_comparison.png)
 
-- However, when analyzing the correlation on a country-by-country basis, the results vary significantly. For instance, in Canada, the correlation between GDP and CO2 emissions is quite similar to that between population and CO2 emissions. In contrast, China shows a slight deviation between the two correlations. Notably, Russia exhibits a substantial disparity, with a GDP-CO2 correlation of 0.26 and a population-CO2 correlation of 0.92. This large difference could indicate a data inconsistency, either due to issues in data collection, reporting errors, or potential errors in my own calculations.
+- However, when analyzing the correlation on a country-by-country basis, the results vary significantly. For instance, in Canada, the correlation between GDP and CO2 emissions is quite similar to that between population and CO2 emissions. In contrast, China shows a slight deviation between the two correlations. Notably, Russia exhibits a substantial disparity, with a GDP-CO2 correlation of 0.26 and a population-CO2 correlation of 0.92. This large difference could indicate a data inconsistency or other environmental factors specific to Russia
 
 ![Canada correlation between gdp/co2 and pop/co2](Canada_gdp_pop_comparison.png)
+
+![China correlation between gdp/co2 and pop/co2](China_gdp_pop_comparison.png)
+
+![Mexico correlation between gdp/co2 and pop/co2](Mexico_gdp_pop_comparison.png)
+
+![Russia correlation between gdp/co2 and pop/co2](Russia_gdp_pop_comparison.png)
 
 
 
