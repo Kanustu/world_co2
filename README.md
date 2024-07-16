@@ -42,7 +42,10 @@
 
 ### How has fossil fuel emmisions changed over time?
 
+- Fossil fuels in general have continued to increase over time, and even though other sources began to contribute to the overall CO2 levels, coal is still the number one contributer of fossil fuel CO2.
+
 ![Fossil Fuel Emissions Over Time](co2_sources.png)
+
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
 
