@@ -55,15 +55,6 @@
 ![Industry Emissions Over Time](total_industry_co2.png)
 
 
-### How has coal production changed over time?
-
-- Overall, countries have significantly reduced their coal production. However, the two largest CO2 producers show markedly different trends.  The following plots illustrate these differences.
-
-![United States Coal Emissions Over Time](united_states_co2_emissions_plot.png)
-
-
-![China Coal Percentage of CO2 Emissions](china_co2_emissions_plot.png)
-
 ### What are the per capita fossil fuel emisssions by country?
 
 - Despite being one of the largest CO2 producers due to its massive population, China's per capita CO2 emissions stand at 7.99 tons, placing it only in the middle of the pack. Qatar leads with a staggering 37.60 tons per capita, while countries like Australia, Canada, and the United States all have per capita emissions that are at least double that of China.
@@ -77,6 +68,7 @@
 | 2022 | China         | 7.99               |
 
 
+
 ### Is there a correlation between CO2 emissions from fossil fuels and a country's GDP or population?
 
 - When examining the total CO2 emissions of all countries combined in relation to GDP and population, GDP shows a much stronger correlation than population. 
@@ -87,9 +79,12 @@
 
 ![Canada correlation between gdp/co2 and pop/co2](Canada_gdp_pop_comparison.png)
 
+
 ![China correlation between gdp/co2 and pop/co2](China_gdp_pop_comparison.png)
 
+
 ![Mexico correlation between gdp/co2 and pop/co2](Mexico_gdp_pop_comparison.png)
+
 
 ![Russia correlation between gdp/co2 and pop/co2](Russia_gdp_pop_comparison.png)
 
