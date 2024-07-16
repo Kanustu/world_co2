@@ -2,6 +2,15 @@
 **Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 ## SQL/Postgresql
 
+```sql
+CREATE Table country_info (
+	id SERIAL PRIMARY KEY,
+	country VARCHAR(50),
+	year INT,
+	population FLOAT,
+	gdp FLOAT
+);
+```
 
 ## Python/Jupyter Notebook
 
