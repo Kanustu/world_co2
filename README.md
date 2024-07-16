@@ -3,13 +3,48 @@
 ## SQL/Postgresql
 
 ```sql
-CREATE Table country_info (
-	id SERIAL PRIMARY KEY,
-	country VARCHAR(50),
-	year INT,
-	population FLOAT,
-	gdp FLOAT
-);
+SELECT 
+    ci.country, 
+    ci.year, 
+	ci.population, 
+	ci.gdp, 
+	co.cement_mt, 
+	co.co2_mt, 
+	co.coal_mt, 
+	co.gas_mt, 
+	co.oil_mt
+FROM country_info ci
+    JOIN co2 co
+    ON ci.id = co.ci_id;
+```
+
+```sql
+CREATE VIEW current_countries AS
+SELECT 
+    ci.country, 
+	ci.year, 
+	ci.population, 
+	ci.gdp, 
+	co.cement_mt, 
+	co.co2_mt, 
+	co.coal_mt, 
+	co.gas_mt, 
+	co.oil_mt
+FROM country_info AS ci
+JOIN co2 AS co
+    ON ci.id = co.ci_id
+WHERE country NOT IN('World', 'Africa', 'South America') 
+    AND country NOT LIKE '%countries%'
+    AND country NOT LIKE '%GCP%'
+	AND country NOT LIKE '%International%'
+	AND country NOT LIKE '%Asia%'
+	AND country NOT LIKE '%Europe%'
+	AND country NOT LIKE 'North America%'
+	AND co.co2_mt IS NOT NULL
+	AND co.coal_mt IS NOT NULL
+	AND co.gas_mt IS NOT NULL
+	AND co.oil_mt IS NOT NULL
+	AND co.cement_mt IS NOT NULL;
 ```
 
 ## Python/Jupyter Notebook
