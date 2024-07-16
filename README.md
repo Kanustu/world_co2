@@ -40,6 +40,9 @@
 | 2013 | 226555.346 |  65565.896 |  51159.331 |  32106.497 |   6313.215 |
 | 2012 | 225160.414 |  65333.733 |  50952.808 |  32064.065 |   6068.376 |
 
+### How has fossil fuel emmisions changed over time?
+
+![Fossil Fuel Emissions Over Time](co2_sources.png)
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
 
