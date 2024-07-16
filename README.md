@@ -17,7 +17,6 @@ FROM country_info ci
     JOIN co2 co
     ON ci.id = co.ci_id;
 ```
-
 ```sql
 CREATE VIEW current_countries AS
 SELECT 
@@ -46,7 +45,130 @@ WHERE country NOT IN('World', 'Africa', 'South America')
 	AND co.oil_mt IS NOT NULL
 	AND co.cement_mt IS NOT NULL;
 ```
+```sql
+SELECT 
+    country, 
+	ROUND(SUM(co2_mt)) as cumulative_co2
+FROM current_countries
+GROUP BY country
+HAVING SUM(co2_mt) IS NOT NULL
+ORDER BY cumulative_co2 DESC
+LIMIT 10;
+```
+```sql
+SELECT 
+    country, 
+	year, 
+	ROUND(CAST(co2_mt/population*1000000 AS numeric),2) AS per_capita_co2
+FROM current_countries
+WHERE country = 'Canada';
+```
+```sql
+WITH per_capita AS(
+SELECT 
+    country, 
+	year, 
+	ROUND(CAST(co2_mt/population*1000000 AS numeric),2) AS per_capita_co2
+FROM current_countries
+)
+, per_capita_lag AS (
+SELECT 
+	country, 
+	year, 
+	per_capita_co2,
+	LAG(per_capita_co2) OVER (PARTITION BY country ORDER BY year) AS prev_per_capita
+FROM per_capita
+)
+SELECT 
+    country, 
+	year, 
+	per_capita_co2, 
+	CASE
+	    WHEN prev_per_capita IS NULL THEN NULL
+		ELSE ROUND((per_capita_co2 - prev_per_capita) / prev_per_capita * 100)
+	END AS pct_change
+FROM per_capita_lag
+WHERE year = 2020
+ORDER BY pct_change;
+```
+```sql
+SELECT 
+    year, 
+    ROUND(CAST(SUM(co2_mt) AS numeric), 2) AS total_co2, 
+    ROUND(CAST(SUM(coal_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS coal_percentage,
+	ROUND(CAST(SUM(gas_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS gas_percentage,
+	ROUND(CAST(SUM(oil_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS oil_percentage,
+	ROUND(CAST(SUM(cement_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS cement_percentage
+FROM current_countries
+GROUP BY year
+ORDER BY year;
+```
+```sql
+SELECT 
+    country,
+	ROUND(CAST(SUM(co2_mt) AS numeric), 2) AS total_co2, 
+    ROUND(CAST(SUM(coal_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS coal_percentage,
+	ROUND(CAST(SUM(gas_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS gas_percentage,
+	ROUND(CAST(SUM(oil_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS oil_percentage,
+	ROUND(CAST(SUM(cement_mt)/SUM(co2_mt) AS numeric) * 100, 2) AS cement_percentage
+FROM current_countries
+GROUP BY country
+ORDER BY total_co2 DESC;
+```
+```sql
+WITH total_co2 AS(
+SELECT 
+	ROUND(SUM(co2_mt)*1000000) AS total_co2
+FROM current_countries
+)
 
+SELECT 
+    country, 
+	ROUND(SUM(cc.co2_mt)) AS total_co2_mt,
+    ROUND(SUM(cc.co2_mt*1000000/tc.total_co2 * 100)) AS percentage
+FROM current_countries cc
+CROSS JOIN total_co2 tc
+GROUP BY country
+ORDER BY percentage DESC
+LIMIT 10;
+```
+```sql
+WITH lag_data AS (
+SELECT 
+    year, 
+	country,
+	gdp,
+	population,
+	co2_mt,
+	LAG(gdp) OVER (PARTITION BY country ORDER BY year) AS prev_gdp,
+	LAG(co2_mt) OVER (PARTITION BY country ORDER BY year) AS prev_co2,
+	LAG(population) OVER (PARTITION BY country ORDER BY year) AS prev_pop
+FROM current_countries
+)
+SELECT 
+    year, 
+	country,
+	gdp,
+	CASE
+	    WHEN prev_gdp != 0
+		THEN ROUND((gdp - prev_gdp)/prev_gdp * 100)
+		ELSE NULL
+	END AS gdp_pct_change,
+	co2_mt,
+	CASE
+	    WHEN prev_co2 != 0
+		THEN ROUND((co2_mt - prev_co2)/prev_co2 * 100)
+		ELSE NULL
+	END AS co2_pct_change,
+	population,
+	CASE
+	    WHEN prev_pop != 0
+		THEN ROUND((population - prev_pop)/prev_pop * 100)
+		ELSE NULL
+	END AS pop_pct_change
+FROM lag_data
+WHERE country = 'Canada';
+```
 ## Python/Jupyter Notebook
 
 ### What countries have produced the most CO2 overtime?
