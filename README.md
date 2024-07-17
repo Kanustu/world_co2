@@ -2,6 +2,11 @@
 **Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 ## SQL/Postgresql
 
+#### Global Co2 Fossil Fuel Exploration
+
+- Skills used: Joins, CTE's, Case Statements, Window Functions, Aggregate Functions, Creating Views, Converting Data Types
+
+
 ```sql
 SELECT 
     ci.country, 
