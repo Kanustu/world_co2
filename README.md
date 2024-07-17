@@ -2,11 +2,11 @@
 **Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 ## SQL/Postgresql
 
-#### Global Co2 Fossil Fuel Exploration
+### Global Co2 Fossil Fuel Exploration
 
 - Skills used: Joins, CTE's, Case Statements, Window Functions, Aggregate Functions, Creating Views, Converting Data Types
 
-
+#### Select and display all the data that will be used
 ```sql
 SELECT 
     ci.country, 
@@ -22,6 +22,8 @@ FROM country_info ci
     JOIN co2 co
     ON ci.id = co.ci_id;
 ```
+
+#### Creating a View of the combined data, including only current countries and no null co2 data
 ```sql
 CREATE VIEW current_countries AS
 SELECT 
@@ -50,6 +52,8 @@ WHERE country NOT IN('World', 'Africa', 'South America')
 	AND co.oil_mt IS NOT NULL
 	AND co.cement_mt IS NOT NULL;
 ```
+
+#### Select and display total cumulative co2 levels
 ```sql
 SELECT 
     country, 
@@ -60,6 +64,8 @@ HAVING SUM(co2_mt) IS NOT NULL
 ORDER BY cumulative_co2 DESC
 LIMIT 10;
 ```
+
+#### SELECT and display co2 per capita levels for Canada in metric tonnes
 ```sql
 SELECT 
     country, 
@@ -68,6 +74,8 @@ SELECT
 FROM current_countries
 WHERE country = 'Canada';
 ```
+
+#### Calculate and display percentage change in per capita year over year
 ```sql
 WITH per_capita AS(
 SELECT 
@@ -96,6 +104,8 @@ FROM per_capita_lag
 WHERE year = 2020
 ORDER BY pct_change;
 ```
+
+#### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by year
 ```sql
 SELECT 
     year, 
@@ -108,6 +118,8 @@ FROM current_countries
 GROUP BY year
 ORDER BY year;
 ```
+
+#### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by country
 ```sql
 SELECT 
     country,
@@ -120,6 +132,8 @@ FROM current_countries
 GROUP BY country
 ORDER BY total_co2 DESC;
 ```
+
+#### Calculate and display the total historic co2 emissions and the percentage of that total ordered by top 10 countries
 ```sql
 WITH total_co2 AS(
 SELECT 
@@ -137,6 +151,8 @@ GROUP BY country
 ORDER BY percentage DESC
 LIMIT 10;
 ```
+
+#### Calculate and display year over year percentage change of gdp, population and co2 within a country
 ```sql
 WITH lag_data AS (
 SELECT 
@@ -174,6 +190,8 @@ SELECT
 FROM lag_data
 WHERE country = 'Canada';
 ```
+
+
 ## Python/Jupyter Notebook
 
 ### What countries have produced the most CO2 overtime?
