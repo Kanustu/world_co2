@@ -1,5 +1,4 @@
 # Global CO2 Fossil Fuel Emissions
-**Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 
 This project entails an exploration of global CO2 emissions from fossil fuels, focusing on the historical and temporal changes in fossil fuel usage. The analysis will be conducted using SQL (PostgreSQL) and Python (Pandas) for data exploration, while data visualization will be performed using Python and Tableau.
 
@@ -283,7 +282,38 @@ WHERE country = 'Canada';
 
 ## Tableau Visualizations
 
+### What countries have produced the most CO2 overtime?
 
+- explanation
+**Visuals**
 
+### What years was the most CO2 produced?
 
+- explanation
+**Visuals**
+
+### How has fossil fuel emmisions changed over time?
+
+-explanation
+**Visuals**
+
+### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
+
+-explanation
+**Visuals**
+
+### What are the per capita fossil fuel emisssions by country?
+
+-explanation
+**Visuals**
+
+### Is there a correlation between CO2 emissions from fossil fuels and a country's GDP or population?
+
+-explanation
+**Visuals**
+
+### Anything Tableau specific
+
+-explanation
+**Visuals**
 
