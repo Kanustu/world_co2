@@ -285,35 +285,57 @@ WHERE country = 'Canada';
 ### What countries have produced the most CO2 overtime?
 
 - explanation
-**Visuals**
+
+
+#### Visuals 
+
 
 ### What years was the most CO2 produced?
 
 - explanation
-**Visuals**
+
+
+#### Visuals
+
 
 ### How has fossil fuel emmisions changed over time?
 
--explanation
-**Visuals**
+- explanation
+
+
+#### Visuals
+
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
 
--explanation
-**Visuals**
+- explanation 
+
+
+#### Visuals
+
 
 ### What are the per capita fossil fuel emisssions by country?
 
--explanation
-**Visuals**
+- explanation
+
+
+#### Visuals
+
 
 ### Is there a correlation between CO2 emissions from fossil fuels and a country's GDP or population?
 
--explanation
-**Visuals**
+- explanation
+
+
+#### Visuals
+
 
 ### Anything Tableau specific
 
--explanation
-**Visuals**
+- explanation
+
+
+#### Visuals
+
+
 
