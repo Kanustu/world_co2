@@ -1,7 +1,9 @@
 # Global CO2 Fossil Fuel Emissions
 **Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 
-Dataset used was cultivated by [Our World In Data](https://ourworldindata.org/) and can be found [here](https://github.com/owid/co2-data?tab=readme-ov-file)
+This project?/report? consists of a surface level exploration of the global contribution to Co2 fossil fuel emissions, looking at if fossil fuel use has changed over time, and how it has changed. I will be using postgresql and Pandas for exploration and analysis of the data.
+
+The dataset used was cultivated by [Our World In Data](https://ourworldindata.org/) and can be found [here](https://github.com/owid/co2-data?tab=readme-ov-file).
 
 ## SQL/Postgresql
 
