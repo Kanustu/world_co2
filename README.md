@@ -1,17 +1,15 @@
 # Global CO2 Fossil Fuel Emissions
 **Exploration of countries and territories and their contribution to global co2 fossil fuel emissions**
 
-This project?/report? consists of a surface level exploration of the global contribution to Co2 fossil fuel emissions, looking at if fossil fuel use has changed over time, and how it has changed. I will be using postgresql and Pandas for exploration and analysis of the data.
+This project entails an exploration of global CO2 emissions from fossil fuels, focusing on the historical and temporal changes in fossil fuel usage. The analysis will be conducted using SQL (PostgreSQL) and Python (Pandas) for data exploration, while data visualization will be performed using Python and Tableau.
 
 The dataset used was cultivated by [Our World In Data](https://ourworldindata.org/) and can be found [here](https://github.com/owid/co2-data?tab=readme-ov-file).
 
 ## SQL/Postgresql
 
-### Global Co2 Fossil Fuel Exploration
-
 - Skills used: Joins, CTE's, Case Statements, Window Functions, Aggregate Functions, Creating Views, Converting Data Types
 
-#### Select and display all the data that will be used
+### Select and display all the data that will be used
 ```sql
 SELECT 
     ci.country, 
@@ -28,7 +26,7 @@ FROM country_info ci
     ON ci.id = co.ci_id;
 ```
 
-#### Creating a View of the combined data, including only current countries and no null co2 data
+### Creating a View of the combined data, including only current countries and no null co2 data
 ```sql
 CREATE VIEW current_countries AS
 SELECT 
@@ -58,7 +56,7 @@ WHERE country NOT IN('World', 'Africa', 'South America')
 	AND co.cement_mt IS NOT NULL;
 ```
 
-#### Select and display total cumulative co2 levels
+### Select and display total cumulative co2 levels
 ```sql
 SELECT 
     country, 
@@ -70,7 +68,7 @@ ORDER BY cumulative_co2 DESC
 LIMIT 10;
 ```
 
-#### SELECT and display co2 per capita levels for Canada in metric tonnes
+### SELECT and display co2 per capita levels for Canada in metric tonnes
 ```sql
 SELECT 
     country, 
@@ -80,7 +78,7 @@ FROM current_countries
 WHERE country = 'Canada';
 ```
 
-#### Calculate and display percentage change in per capita year over year
+### Calculate and display percentage change in per capita year over year
 ```sql
 WITH per_capita AS(
 SELECT 
@@ -110,7 +108,7 @@ WHERE year = 2020
 ORDER BY pct_change;
 ```
 
-#### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by year
+### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by year
 ```sql
 SELECT 
     year, 
@@ -124,7 +122,7 @@ GROUP BY year
 ORDER BY year;
 ```
 
-#### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by country
+### Calculate and display the percentage of coal, oil, gas and cement CO2 emissions in total cumulative CO2 emissions by country
 ```sql
 SELECT 
     country,
@@ -138,7 +136,7 @@ GROUP BY country
 ORDER BY total_co2 DESC;
 ```
 
-#### Calculate and display the total historic co2 emissions and the percentage of that total ordered by top 10 countries
+### Calculate and display the total historic co2 emissions and the percentage of that total ordered by top 10 countries
 ```sql
 WITH total_co2 AS(
 SELECT 
@@ -157,7 +155,7 @@ ORDER BY percentage DESC
 LIMIT 10;
 ```
 
-#### Calculate and display year over year percentage change of gdp, population and co2 within a country
+### Calculate and display year over year percentage change of gdp, population and co2 within a country
 ```sql
 WITH lag_data AS (
 SELECT 
@@ -281,6 +279,11 @@ WHERE country = 'Canada';
 
 
 ![Russia correlation between gdp/co2 and pop/co2](Russia_gdp_pop_comparison.png)
+
+
+## Tableau Visualizations
+
+
 
 
 
