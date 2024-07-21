@@ -287,7 +287,7 @@ WHERE country = 'Canada';
 - explanation
 
 
-#### Visuals 
+![Total cumulative CO2](top10cumulative.png)
 
 
 ### What years was the most CO2 produced?
