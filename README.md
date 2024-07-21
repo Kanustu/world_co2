@@ -284,10 +284,11 @@ WHERE country = 'Canada';
 
 ### What countries have produced the most CO2 overtime?
 
-- explanation
+- The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
 
 
 ![Total cumulative CO2](top10cumulative.png)
+
 
 
 ### What years was the most CO2 produced?
