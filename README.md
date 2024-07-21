@@ -293,10 +293,10 @@ WHERE country = 'Canada';
 
 ### What years was the most CO2 produced?
 
-- explanation
+- The top 10 years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
 
 
-#### Visuals
+![Top 10 years total CO2](top10yearsCO2.png)
 
 
 ### How has fossil fuel emmisions changed over time?
