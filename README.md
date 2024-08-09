@@ -282,61 +282,7 @@ WHERE country = 'Canada';
 
 ## Tableau Visualizations
 
-### What countries have produced the most CO2 overtime?
 
-- The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
-
-
-![Total cumulative CO2](top10cumulative.png)
-
-
-
-### What years was the most CO2 produced?
-
-- The top 10 years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
-
-
-![Top 10 years total CO2](top10yearsco2.png)
-
-
-### How has fossil fuel emmisions changed over time?
-
-- explanation
-
-
-#### Visuals
-
-
-### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
-
-- explanation 
-
-
-#### Visuals
-
-
-### What are the per capita fossil fuel emisssions by country?
-
-- explanation
-
-
-#### Visuals
-
-
-### Is there a correlation between CO2 emissions from fossil fuels and a country's GDP or population?
-
-- explanation
-
-
-#### Visuals
-
-
-### Anything Tableau specific
-
-- explanation
-
-
-#### Visuals
 
 
 
