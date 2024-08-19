@@ -198,7 +198,7 @@ WHERE country = 'Canada';
 
 ### What countries have produced the most CO2 overtime?
 
-- The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This stark contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
+- The United States emerges as the largest contributor to cumulative CO2 levels, leading significantly ahead of other nations. China, although also a major emitter, follows at a considerable distance. This contrast highlights the historical impact of industrial activities in the United States on global CO2 emissions.
 
 | Country        |      CO2 Emissions |
 |:---------------|--------------------:|
@@ -216,7 +216,7 @@ WHERE country = 'Canada';
 
 ### What years was the most CO2 produced?
 
-- The top 10 years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlight the years with the highest emissions, providing insights into the recent trends in global CO2 production.
+- The top 10 years span from 2012 to 2022, with a notable absence of 2020. This missing year likely reflects the global reduction in industrial activity and transportation due to the COVID-19 pandemic. The following data highlights the years with the highest emissions, providing insights into the recent trends in global CO2 production.
 
 | Year |        CO2 |   Coal CO2 |    Oil CO2 |    Gas CO2 | Cement CO2 |
 |:-----|-----------:|-----------:|-----------:|-----------:|-----------:|
@@ -240,7 +240,7 @@ WHERE country = 'Canada';
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
 
-- Starting from the year 1750, coal was responsible for 100% of CO2 emissions. Over the centuries, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
+- Starting from the year 1750, coal was responsible for 100% of fossil fuel CO2 emissions. Over the decades, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on fossil fuel CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
 
 
 ![Industry Emissions Over Time](total_industry_co2.png)
