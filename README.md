@@ -235,7 +235,7 @@ WHERE country = 'Canada';
 
 - Despite the growing contributions of other energy sources to overall CO2 levels, fossil fuel emissions have continued to rise over time. Among fossil fuels, coal remains the leading contributor to CO2 emissions.
 
-![Fossil Fuel Emissions Over Time](co2_sources.png)
+![Fossil Fuel Emissions Over Time](images/co2_sources.png)
 
 
 ### What percentage of fossil fuel CO2 is each industry(coal, oil, gas, cement) responsible for? How has it changed over time?
@@ -243,7 +243,7 @@ WHERE country = 'Canada';
 - Starting from the year 1750, coal was responsible for 100% of fossil fuel CO2 emissions. Over the decades, the contributions from oil, gas, and cement have increased, leading to a more diverse industrial impact on fossil fuel CO2 levels. By 2022, the reliance on coal has decreased significantly, with its share of CO2 emissions dropping by 73%. The following data and visualizations illustrate these changes, highlighting the evolving sources of CO2 emissions over time.
 
 
-![Industry Emissions Over Time](total_industry_co2.png)
+![Industry Emissions Over Time](images/total_industry_co2.png)
 
 
 ### What are the per capita fossil fuel emisssions by country?
@@ -264,25 +264,25 @@ WHERE country = 'Canada';
 
 - When examining the total CO2 emissions of all countries combined in relation to GDP and population, GDP shows a much stronger correlation than population. 
 
-![Total correlation between gdp-co2 and pop-co2](industry_co2.png)
+![Total correlation between gdp-co2 and pop-co2](images/industry_co2.png)
 
 - However, when analyzing the correlation on a country-by-country basis, the results vary significantly. For instance, in Canada, the correlation between GDP and CO2 emissions is quite similar to that between population and CO2 emissions. In contrast, China shows a slight deviation between the two correlations. Notably, Russia exhibits a substantial disparity, with a GDP-CO2 correlation of 0.26 and a population-CO2 correlation of 0.92. This large difference could indicate a data inconsistency or other environmental factors specific to Russia
 
-![Canada correlation between gdp/co2 and pop/co2](Canada_gdp_pop_comparison.png)
+![Canada correlation between gdp/co2 and pop/co2](images/Canada_gdp_pop_comparison.png)
 
 
-![China correlation between gdp/co2 and pop/co2](China_gdp_pop_comparison.png)
+![China correlation between gdp/co2 and pop/co2](images/China_gdp_pop_comparison.png)
 
 
-![Mexico correlation between gdp/co2 and pop/co2](Mexico_gdp_pop_comparison.png)
+![Mexico correlation between gdp/co2 and pop/co2](images/Mexico_gdp_pop_comparison.png)
 
 
-![Russia correlation between gdp/co2 and pop/co2](Russia_gdp_pop_comparison.png)
+![Russia correlation between gdp/co2 and pop/co2](images/Russia_gdp_pop_comparison.png)
 
 
 ## Tableau Visualizations
 
-# Title
+
 
 
 
