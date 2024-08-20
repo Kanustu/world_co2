@@ -280,9 +280,18 @@ WHERE country = 'Canada';
 ![Russia correlation between gdp/co2 and pop/co2](images/Russia_gdp_pop_comparison.png)
 
 
-## Tableau Visualizations
+## Tableau Presentation
 
-![Title](images/co2_title.png)
+![World Co2 Exploration Title Page](images/co2_title.png)
 
+![Initial Questions](images/co2_questions.png)
 
+![co2 by year](images/co2_years.png)
 
+![co2 by country](images/co2_countries.png)
+
+![co2 by industry](images/co2_industries.png)
+
+![co2 correlation](images/co2_correlation.png)
+
+![key takeaways](images/co2_takeaways.png)
