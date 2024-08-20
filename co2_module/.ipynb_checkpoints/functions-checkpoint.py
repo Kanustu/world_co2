@@ -244,6 +244,7 @@ def dual_scatter(country: str, data: pd.DataFrame):
     axes[1].set_ylabel('GDP')
 
     # Display plots
+    plt.savefig(f'{country.lower()}_gdp_pop_comparison.png', bbox_inches='tight')
     plt.show()
 
 # Sample dictionaries for calculations
