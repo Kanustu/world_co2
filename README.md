@@ -282,7 +282,7 @@ WHERE country = 'Canada';
 
 ## Tableau Visualizations
 
-
+![Title](images/co2_title.png)
 
 
 
